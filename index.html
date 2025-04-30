@@ -17,32 +17,45 @@
 					<h1 class="text-3xl font-family-inter">Data pilot</h1>
 				</div>
 
+				<button onclick="toggleMobileNav()" class="lg:hidden text-white text-3xl">
+					☰
+				</button>
+
 				<nav class="max-lg:hidden">
 					<ul class="flex items-center gap-5 ">
-						<li><a href="">Main</a></li>
-						<li><a href="">Features</a></li>
-						<li><a href="">Testimonials</a></li>
-						<li><a href="">Pricing</a></li>
+						<li onclick="scrollToSection(event, 'main')"><a href="">Main</a></li>
+						<li onclick="scrollToSection(event, 'features')"><a href="">Features</a></li>
+						<li onclick="scrollToSection(event, 'testimonials')"><a href="">Testimonials</a></li>
+						<li onclick="scrollToSection(event, 'pricing')"><a href="">Pricing</a></li>
+					</ul>
+				</nav>
+
+				<nav id="mobile-nav" class="lg:hidden fixed top-0 right-0 w-[200px] h-screen bg-main text-white py-10 px-5 hidden z-20 transition-transform duration-300">
+					<ul class="flex flex-col gap-6">
+						<li><a href="#main" onclick="scrollToSection(event, 'main'); toggleMobileNav()">Main</a></li>
+						<li><a href="#features" onclick="scrollToSection(event, 'features'); toggleMobileNav()">Features</a></li>
+						<li><a href="#testimonials" onclick="scrollToSection(event, 'testimonials'); toggleMobileNav()">Testimonials</a></li>
+						<li><a href="#pricing" onclick="scrollToSection(event, 'pricing'); toggleMobileNav()">Pricing</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 
-	<section class="hero w-full h-screen bg-main">
+	<section id="main" class="w-full h-screen bg-main">
 		<div class="container">
 			<div class="hero-inner w-full h-screen flex items-center max-xl:pt-30 text-white flex-wrap max-xl:justify-center">
 				<div class="content flex flex-col gap-5 w-full xl:flex-1 max-xl:items-center max-xl:text-center">
 					<h1 class="text-5xl xl:text-8xl">Some title for Data pilot</h1>
 					<p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur, corporis, distinctio impedit ipsum labore obcaecati odio quae quas sit unde velit, veniam vero. Itaque.</p>
-					<button class="capitalize w-50 h-15 text-xl font-bold bg-[#4F9CF9] hover:bg-[#3b78c1] transition-all ease-in">get started</button>
+					<button onclick="scrollToSection(event, 'features')" class="capitalize w-50 h-15 text-xl font-bold bg-[#4F9CF9] hover:bg-[#3b78c1] transition-all ease-in">get started</button>
 				</div>
 				<img src="./src/imgs/hero.png" alt="" class="xl:flex-1 max-xl:w-1/2 ">
 			</div>
 		</div>
 	</section>
 
-	<section class="features w-full h-full py-20">
+	<section id="features" class="w-full h-full py-20">
 		<div class="container">
 			<div class="features-inner w-full h-full">
 				<h1 class="text-6xl text-center">Features</h1>
@@ -76,11 +89,11 @@
 		</div>
 	</section>
 
-	<section class="testimonials w-full h-full py-20 bg-main">
+	<section id="testimonials" class="w-full h-full py-20 bg-main">
 		<div class="container">
 			<div class="testimonials-inner w-full h-full py-10 text-white">
 				<h1 class="text-6xl text-center">Testimonials</h1>
-				<div class="comments mt-10 flex items-center gap-5">
+				<div class="comments mt-10 flex items-center max-lg:flex-wrap gap-5">
 
 					<div class="comment w-full xl:flex-1 flex flex-col gap-5">
 						<div class="user flex items-center gap-5 ">
@@ -112,7 +125,7 @@
 		</div>
 	</section>
 
-	<section class="pricing w-full h-full py-20">
+	<section id="pricing" class="w-full h-full py-20">
 		<div class="container">
 			<div class="pricing-inner w-full h-full">
 				<h1 class="text-6xl text-center">Pricing</h1>
@@ -200,4 +213,6 @@
 		</div>
 	</footer>
 </body>
+
+<script src="index.js"></script>
 </html>
