@@ -131,7 +131,7 @@
 				<h1 class="text-6xl text-center">Pricing</h1>
 
 				<div class="boxes w-full h-full flex flex-wrap max-2xl:justify-around gap-5 mt-20">
-					<div class="box w-121 h-full p-4 border border-main rounded-[10px] flex flex-col gap-5">
+					<div class="price-box">
 						<h3 class="text-2xl">Standard</h3>
 						<h1 class="text-4xl">$ 9.99</h1>
 						<nav>
@@ -151,7 +151,7 @@
 						<button class="w-30 h-10 mx-auto bg-main text-white">Buy now!</button>
 					</div>
 
-					<div class="box w-121 h-full p-4 border border-main rounded-[10px] flex flex-col gap-5">
+					<div class="price-box">
 						<h3 class="text-2xl">Premium</h3>
 						<h1 class="text-4xl">$ 14.99</h1>
 						<nav>
@@ -171,7 +171,7 @@
 						<button class="w-30 h-10 mx-auto bg-main text-white">Buy now!</button>
 					</div>
 
-					<div class="box w-121 h-full p-4 border bg-main text-white rounded-[10px] flex flex-col gap-5">
+					<div class="price-box bg-main text-white">
 						<h3 class="text-2xl">Gold</h3>
 						<h1 class="text-4xl">$ 17.99</h1>
 						<nav>
@@ -203,10 +203,10 @@
 				</div>
 				<nav>
 					<ul class="flex items-center gap-5">
-						<li><a href="">Main</a></li>
-						<li><a href="">Features</a></li>
-						<li><a href="">Testimonials</a></li>
-						<li><a href="">Pricing</a></li>
+						<li onclick="scrollToSection(event, 'main')"><a href="">Main</a></li>
+						<li onclick="scrollToSection(event, 'features')"><a href="">Features</a></li>
+						<li onclick="scrollToSection(event, 'testimonials')"><a href="">Testimonials</a></li>
+						<li onclick="scrollToSection(event, 'pricing')"><a href="">Pricing</a></li>
 					</ul>
 				</nav>
 			</div>
